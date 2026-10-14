@@ -1,4 +1,4 @@
-# 🛡️ SiteSafe - Hệ Thống Quản Lý An Toàn Công Trường
+# 🛡️ BÀI TẬP LỚN - SITESAFE - Theo dõi an toàn công trường
 
 ## 📌 Thông Tin Dự Án
 * **Tên đề tài:** Hệ thống quản lý và báo cáo an toàn lao động công trường - SiteSafe
