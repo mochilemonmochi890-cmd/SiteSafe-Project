@@ -28,7 +28,7 @@ Trang web được thiết kế dành riêng cho **Cán bộ An toàn (HSE)** v�
 ---
 
 ## 🛠️ Công Nghệ Sử Dụng
-* **HTML:** Cấu trúc theo chuẩn (Semantic tags: `<aside>`, `<main>`, `<article>`, `<nav>`, `<figure>`, `<dl>`, `<dialog>`,...) giúp tối ưu Accessibility.
+* **HTML:** Semantic tags: `<aside>`, `<main>`, `<article>`, `<nav>`, `<figure>`, `<dl>`, `<dialog>`,... giúp tối ưu Accessibility.
 * **CSS:** Bố cục kết hợp **Flexbox** & **CSS Grid**, tổ chức hệ thống màu sắc chỉn chu và thiết lập **Responsive** linh hoạt cho các thiết bị Desktop, Tablet và Mobile.
 * **JavaScript:** Xử lý tương tác DOM, bắt sự kiện người dùng, tính toán định dạng ngày giờ và quản lý Toast Notification động.
 
