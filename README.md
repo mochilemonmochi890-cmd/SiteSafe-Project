@@ -22,16 +22,15 @@ Trang web được thiết kế dành riêng cho **Cán bộ An toàn (HSE)** v�
 2. **Xem ảnh phóng to (Modal Image):** Tương tác mở/đóng Modal lớp phủ để soi rõ hình ảnh sự cố hiện trường (hỗ trợ phím `Esc` và click ngoài khung để đóng).
 3. **Phân tích rủi ro AI & Tương tác cập nhật trạng thái:** Cho phép cán bộ an toàn chấp nhận gợi ý từ AI hoặc chỉnh sửa thủ công mức độ rủi ro.
 4. **Form phân công giao việc:** Cho phép chọn người phụ trách, thiết lập hạn chót, chọn mức ưu tiên và nhập yêu cầu khắc phục.
-5. **Thanh duyệt thời gian thực (Dynamic Approval Summary):** Tự động đồng bộ và hiển thị mức rủi ro, người được giao việc và hạn chót theo các thao tác trên form.
-6. **Hệ thống thông báo Toast (Toast Notifications):** Phản hồi trực quan cho người dùng khi bấm Phê duyệt, Từ chối hoặc Cập nhật đánh giá rủi ro.
+5. **Thanh duyệt thời gian thực:** Tự động đồng bộ và hiển thị mức rủi ro, người được giao việc và hạn chót theo các thao tác trên form.
+6. **Hệ thống thông báo Toast:** Phản hồi trực quan cho người dùng khi bấm Phê duyệt, Từ chối hoặc Cập nhật đánh giá rủi ro.
 
 ---
 
 ## 🛠️ Công Nghệ Sử Dụng
-* **HTML5:** Cấu trúc theo chuẩn **Semantic HTML5** (Semantic tags: `<aside>`, `<main>`, `<article>`, `<nav>`, `<figure>`, `<dl>`, `<dialog>`,...) giúp tối ưu Accessibility.
-* **CSS3:** Bố cục kết hợp **Flexbox** & **CSS Grid**, tổ chức hệ thống màu sắc chỉn chu và thiết lập **Responsive** linh hoạt cho các thiết bị Desktop, Tablet và Mobile.
-* **JavaScript (Vanilla JS):** Xử lý tương tác DOM, bắt sự kiện người dùng, tính toán định dạng ngày giờ và quản lý Toast Notification động.
-* **FontAwesome v6:** Bộ biểu tượng icon giao diện.
+* **HTML:** Cấu trúc theo chuẩn (Semantic tags: `<aside>`, `<main>`, `<article>`, `<nav>`, `<figure>`, `<dl>`, `<dialog>`,...) giúp tối ưu Accessibility.
+* **CSS:** Bố cục kết hợp **Flexbox** & **CSS Grid**, tổ chức hệ thống màu sắc chỉn chu và thiết lập **Responsive** linh hoạt cho các thiết bị Desktop, Tablet và Mobile.
+* **JavaScript:** Xử lý tương tác DOM, bắt sự kiện người dùng, tính toán định dạng ngày giờ và quản lý Toast Notification động.
 
 ---
 
