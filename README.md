@@ -36,5 +36,5 @@ Trang web được thiết kế dành riêng cho **Cán bộ An toàn (HSE)** v�
 
 ## 🔗 Các Liên Kết Dự Án
 * **Link Figma Design:** https://www.figma.com/design/kmz9k0nSOrJpsAJog4IEFx/CSE122_SiteSafe?node-id=0-1&t=TtNlpzuS3pYKFoeF-1
-* **Link Video Demo (3 phút):** https://youtu.be/GLpYXkojFnY
+* **Link Video Demo:** https://youtu.be/GLpYXkojFnY
 * **Link GitHub Repository:** https://github.com/mochilemonmochi890-cmd/SiteSafe-Project
