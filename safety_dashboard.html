@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteSafe - Tổng quan an toàn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="safety_dashboard.css">
+</head>
+<body>
+  <!-- Lớp phủ nền khi mở menu trên di động -->
+  <div class="lop-phu-mobile" id="lopPhuMobile"></div>
+  <div class="khung-ung-dung">
+    <aside class="thanh-ben" id="thanhBen">
+      <header class="bieu-truong">
+        <a href="safety_dashboard.html" class="logo-thuong-hieu" style="display:flex;align-items:center;text-decoration:none;">
+          <img src="../../assets/logo_SiteSafe.png" alt="SiteSafe Logo" class="anh-bieu-truong">
+        </a>
+        <button type="button" class="nut-dong-menu-mobile" id="nutDongMenuMobile" aria-label="Đóng menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </header>
+
+      <fieldset class="bo-chon-du-an">
+        <legend class="nhan">CÔNG TRƯỜNG</legend>
+        <select id="siteSelect">
+          <option value="Metro Tower - Khu B">Metro Tower - Khu B</option>
+          <option value="Landmark Riverside - Zone A">Landmark Riverside - Zone A</option>
+          <option value="Hầm chui Hoàng Cầu - Gói 3">Hầm chui Hoàng Cầu - Gói 3</option>
+          <option value="Grand Marina - Tháp C">Grand Marina - Tháp C</option>
+        </select>
+      </fieldset>
+
+      <nav class="danh-muc-dieu-huong" aria-label="Điều hướng chính">
+        <h2 class="nhan-danh-muc">QUẢN LÝ AN TOÀN</h2>
+        <a href="safety_dashboard.html" class="muc-dieu-huong muc-dieu-huong-kich-hoat" aria-current="page">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Tổng quan an toàn</span>
+        </a>
+        <a href="../hazard_detail/safety-hazard-detail.html" class="muc-dieu-huong">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span>Chi tiết mối nguy</span>
+        </a>
+        <a href="../inspection_management_table/safety-inspection-management_table.html" class="muc-dieu-huong">
+          <i class="fa-solid fa-clipboard-check"></i>
+          <span>Quản lý kiểm tra</span>
+        </a>
+      </nav>
+
+      <a href="../../share/profile/profile.html?role=safety" class="ho-so-nguoi-dung" title="Hồ sơ người dùng" style="text-decoration: none; color: inherit;">
+        <span class="anh-da-dien">NT</span>
+        <div class="thong-tin">
+          <strong class="ten">Nguyễn Thanh</strong>
+          <span class="vai-tro">Cán bộ an toàn</span>
+        </div>
+        <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #94a3b8; font-size: 11px;"></i>
+      </a>
+      <a href="../../share/login/login.html" class="nut-dang-xuat" style="text-decoration: none;">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất
+      </a>
+    </aside>
+
+    <main class="noi-dung-chinh">
+      <header class="thanh-dau-trang">
+        <div class="dau-trang-trai">
+          <button type="button" class="nut-mo-menu-mobile" id="nutMenuMobile" aria-label="Mở menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="safety_dashboard.html" class="anh-logo-mobile-link">
+            <img src="../../assets/logo_SiteSafe.png" alt="SiteSafe" class="anh-logo-mobile">
+          </a>
+          <i class="fa-solid fa-building-shield bieu-tuong-xam"></i>
+          <p>
+            <small class="phu">CÔNG TRƯỜNG ĐANG THEO DÕI</small>
+            <strong class="du-an-hien-tai" id="topbarProjectTitle">Metro Tower - Khu B <i class="fa-solid fa-chevron-down"></i></strong>
+          </p>
+        </div>
+        <div class="dau-trang-phai">
+          <a href="../../share/notifications/notifications.html?role=safety" class="nut-bieu-tuong" title="Thông báo" aria-label="Thông báo">
+            <i class="fa-regular fa-bell"></i>
+          </a>
+          <a href="../../share/profile/profile.html?role=safety" class="nut-bieu-tuong" title="Hồ sơ cá nhân" aria-label="Hồ sơ cá nhân">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </div>
+      </header>
+
+      <div class="than-trang">
+        <header class="tieu-de-chinh">
+          <div>
+            <h1>Dashboard an toàn</h1>
+            <p class="tieu-de-phu">Thứ Bảy, 03/10/2026 · Ca sáng · Cập nhật lúc 10:32</p>
+          </div>
+          <div class="nhom-nut-thao-tac">
+            <button type="button" class="nut-vieu-ngoai"><i class="fa-solid fa-download"></i> Xuất báo cáo</button>
+            <button type="button" class="nut-chinh"><i class="fa-solid fa-plus"></i> Ghi nhận mối nguy</button>
+          </div>
+        </header>
+
+        <section class="the-canh-bao nguy-hiem">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <div>
+            <strong>3 sự cố quá hạn cần xử lý ngay trong ca sáng</strong>
+            <p>Lan can tầng 12, giàn giáo tầng 3 và tủ điện tầng 6 - Đã cô lập khu vực nguy hiểm.</p>
+          </div>
+          <a href="#" class="lien-ket-canh-bao">Xem 3 sự cố &rarr;</a>
+        </section>
+
+        <section class="luoi-thong-ke">
+          <article class="the-thong-ke">
+            <div class="dau-the"><span>Tổng số mối nguy</span><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div class="gia-tri-thong-ke">128 <small>Zone B</small></div>
+            <p class="mo-ta-thong-ke">104 đã đóng · 24 đang mở</p>
+          </article>
+          <article class="the-thong-ke">
+            <div class="dau-the"><span>Hành động đang mở</span><i class="fa-regular fa-clipboard"></i></div>
+            <div class="gia-tri-thong-ke canh-bao">24 <small>hành động</small></div>
+            <p class="mo-ta-thong-ke">18 đang xử lý · 6 chờ duyệt</p>
+          </article>
+          <article class="the-thong-ke vien-nguy-hiem">
+            <div class="dau-the"><span>Sự cố quá hạn</span><i class="fa-solid fa-circle-exclamation bieu-tuong-nguy-hiem"></i></div>
+            <div class="gia-tri-thong-ke nguy-hiem">03 <small>cần ưu tiên</small></div>
+            <p class="mo-ta-thong-ke">Thuộc 24 hành động đang mở</p>
+          </article>
+          <article class="the-thong-ke">
+            <div class="dau-the"><span>Chỉ số an toàn</span><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="gia-tri-thong-ke">88<small>/100</small></div>
+            <p class="mo-ta-thong-ke">Đạt · mục tiêu ≥ 80</p>
+          </article>
+        </section>
+
+        <div class="luoi-noi-dung">
+          <section class="cot-trai">
+            <article class="the-noi-dung">
+              <header class="dau-the">
+                <div>
+                  <h3>Xu hướng mối nguy</h3>
+                  <small class="nhan-trung-tinh">27/09 – 03/10/2026 · Số mối nguy mỗi ngày</small>
+                </div>
+                <select class="bo-chon-nho"><option>7 ngày</option></select>
+              </header>
+              <div class="khung-bieu-do">
+                <p class="ghi-chu-bieu-do"><i class="fa-solid fa-arrow-down bieu-tuong-thanh-cong"></i> Giảm 7 mối nguy đang mở từ 31 xuống 24 trong 7 ngày</p>
+              </div>
+            </article>
+
+            <article class="the-noi-dung">
+              <header class="dau-the">
+                <div>
+                  <h3>Hành động ưu tiên</h3>
+                  <small class="nhan-trung-tinh">3 quá hạn + 1 đến hạn hôm nay · Trong 24 hành động</small>
+                </div>
+                <a href="#" class="lien-ket">Xem tất cả &rarr;</a>
+              </header>
+              <table class="bang-du-lieu">
+                <thead>
+                  <tr>
+                    <th>HÀNH ĐỘNG / VỊ TRÍ</th>
+                    <th>PHỤ TRÁCH</th>
+                    <th>HẠN XỬ LÝ</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Bổ sung lan can mép sàn</strong><br><small>B-128 · Tầng 12 - Đội kết cấu</small></td>
+                    <td><span class="anh-da-dien-nho">LH</span> Lê Hoàng</td>
+                    <td class="van-ban-nguy-hiem">02/10 - 16:00<br><small>Quá hạn</small></td>
+                    <td><i class="fa-solid fa-chevron-right"></i></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Gia cố giằng chéo giàn giáo</strong><br><small>B-121 · Tầng 3 - Đội giàn giáo</small></td>
+                    <td><span class="anh-da-dien-nho">TH</span> Trần Hùng</td>
+                    <td class="van-ban-nguy-hiem">02/10 - 17:00<br><small>Quá hạn</small></td>
+                    <td><i class="fa-solid fa-chevron-right"></i></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Khóa và che chắn tủ điện tạm</strong><br><small>B-117 · Tầng 6 - Đội M&E</small></td>
+                    <td><span class="anh-da-dien-nho">PT</span> Phạm Tuấn</td>
+                    <td class="van-ban-nguy-hiem">01/10 - 17:00<br><small>Quá hạn</small></td>
+                    <td><i class="fa-solid fa-chevron-right"></i></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dọn vật liệu tại lối thoát</strong><br><small>B-126 · Tầng 2 - Đội hoàn thiện</small></td>
+                    <td><span class="anh-da-dien-nho">TH</span> Trần Hương</td>
+                    <td>03/10 - 14:00<br><small>Hôm nay</small></td>
+                    <td><i class="fa-solid fa-chevron-right"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article class="the-noi-dung">
+              <header class="dau-the">
+                <h3>Kiểm tra hiện trường hôm nay</h3>
+              </header>
+              <p>Tến độ kế hoạch · Zone B: <strong>18 / 24 lượt</strong></p>
+              <p><small>75% hoàn thành · 6 lượt còn lại</small></p>
+            </article>
+          </section>
+
+          <section class="cot-phai">
+            <article class="the-noi-dung">
+              <header class="dau-the">
+                <h3>Luồng sự cố</h3>
+                <small>Ưu tiên quá hạn · 5 cập nhật mới nhất</small>
+              </header>
+              <div class="nhom-tab-nho">
+                <button type="button" class="tab-nho kich-hoat">Ưu tiên</button>
+                <button type="button" class="tab-nho">Quá hạn 3</button>
+                <button type="button" class="tab-nho">Chờ duyệt 6</button>
+              </div>
+              <div class="danh-sach-su-co">
+                <article class="the-su-co nguy-hiem">
+                  <div class="dau-su-co"><span class="ma">B-128</span><span class="han">Hạn: 02/10 - 16:00</span></div>
+                  <h4>Thiếu lan can tại mép sàn</h4>
+                  <p class="vi-tri">Zone B · Tầng 12 · Lê Hoàng</p>
+                  <p class="mo-ta">Đã cô lập mép sàn. Chưa có ảnh xác nhận khắc phục.</p>
+                  <div class="chan-su-co">
+                    <mark class="nhan-trang-thai nguy-hiem">Quá hạn · Rủi ro cao</mark>
+                    <button type="button" class="nut-chinh nut-nho">Nhắc khắc phục</button>
+                  </div>
+                </article>
+
+                <article class="the-su-co canh-bao">
+                  <div class="dau-su-co"><span class="ma">B-121</span><span class="han">Hạn: 02/10 - 17:00</span></div>
+                  <h4>Giàn giáo thiếu giằng chéo</h4>
+                  <p class="vi-tri">Zone B · Tầng 3 · Trần Hùng</p>
+                  <p class="mo-ta">Đã dừng sử dụng. Cần gia cố trước khi nghiệm thu.</p>
+                  <div class="chan-su-co">
+                    <mark class="nhan-trang-thai nguy-hiem">Quá hạn · Rủi ro cao</mark>
+                    <button type="button" class="nut-chinh nut-nho">Yêu cầu xử lý</button>
+                  </div>
+                </article>
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+
+      <footer class="chan-trang-ung-dung">
+        <span>SiteSafe - An toàn để xây dựng.</span>
+        <span>• Đã đồng bộ lúc 10:32 - Dữ liệu minh họa</span>
+      </footer>
+    </main>
+  </div>
+  <script src="safety_dashboard.js" defer></script></body>
+</html>

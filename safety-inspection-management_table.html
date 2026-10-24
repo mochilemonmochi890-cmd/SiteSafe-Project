@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteSafe - Inspection Management · Bảng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="safety-inspection-management_table.css">
+</head>
+<body>
+  <!-- Lớp phủ nền khi mở menu trên di động -->
+  <div class="lop-phu-mobile" id="lopPhuMobile"></div>
+
+  <div class="khung-ung-dung">
+    <aside class="thanh-ben" id="thanhBen">
+      <header class="bieu-truong">
+        <a href="../safety_dashboard/safety_dashboard.html" class="logo-thuong-hieu" style="display:flex;align-items:center;text-decoration:none;">
+          <img src="../../assets/logo_SiteSafe.png" alt="SiteSafe Logo" class="anh-bieu-truong">
+        </a>
+        <button type="button" class="nut-dong-menu-mobile" id="nutDongMenuMobile" aria-label="Đóng menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </header>
+
+      <fieldset class="bo-chon-du-an">
+        <legend class="nhan">CÔNG TRƯỜNG</legend>
+        <select id="siteSelect">
+          <option value="Metro Tower - Khu B">Metro Tower - Khu B</option>
+          <option value="Landmark Riverside - Zone A">Landmark Riverside - Zone A</option>
+          <option value="Hầm chui Hoàng Cầu - Gói 3">Hầm chui Hoàng Cầu - Gói 3</option>
+          <option value="Grand Marina - Tháp C">Grand Marina - Tháp C</option>
+        </select>
+      </fieldset>
+
+      <nav class="danh-muc-dieu-huong" aria-label="Điều hướng chính">
+        <h2 class="nhan-danh-muc">QUẢN LÝ AN TOÀN</h2>
+        <a href="../safety_dashboard/safety_dashboard.html" class="muc-dieu-huong">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Tổng quan an toàn</span>
+        </a>
+        <a href="../hazard_detail/safety-hazard-detail.html" class="muc-dieu-huong">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span>Chi tiết mối nguy</span>
+        </a>
+        <a href="safety-inspection-management_table.html" class="muc-dieu-huong muc-dieu-huong-kich-hoat" aria-current="page">
+          <i class="fa-solid fa-clipboard-check"></i>
+          <span>Quản lý kiểm tra</span>
+        </a>
+      </nav>
+
+      <a href="../../share/profile/profile.html?role=safety" class="ho-so-nguoi-dung" title="Hồ sơ người dùng" style="text-decoration: none; color: inherit;">
+        <span class="anh-da-dien">NT</span>
+        <div class="thong-tin">
+          <strong class="ten">Nguyễn Thanh</strong>
+          <span class="vai-tro">Cán bộ an toàn</span>
+        </div>
+        <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #94a3b8; font-size: 11px;"></i>
+      </a>
+      <a href="../../share/login/login.html" class="nut-dang-xuat" style="text-decoration: none;">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất
+      </a>
+    </aside>
+
+    <main class="noi-dung-chinh">
+      <header class="thanh-dau-trang">
+        <div class="dau-trang-trai">
+          <button type="button" class="nut-mo-menu-mobile" id="nutMenuMobile" aria-label="Mở menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="../safety_dashboard/safety_dashboard.html" class="anh-logo-mobile-link">
+            <img src="../../assets/logo_SiteSafe.png" alt="SiteSafe" class="anh-logo-mobile">
+          </a>
+          <nav aria-label="Đường dẫn trang" class="duong-dan-desktop">
+            <ol class="duong-dan-trang">
+              <li><i class="fa-solid fa-building bieu-tuong-xam"></i> <span id="topbarProjectTitle">Metro Tower - Khu B</span> <i class="fa-solid fa-chevron-right"></i></li>
+              <li class="hien-tai" aria-current="page"><strong>Đợt kiểm tra</strong></li>
+            </ol>
+          </nav>
+        </div>
+        <div class="dau-trang-phai">
+          <span class="trang-thai-dong-bo"><i class="fa-solid fa-circle bieu-tuong-thanh-cong"></i> Đã đồng bộ</span>
+          <a href="../../share/notifications/notifications.html?role=safety" class="nut-bieu-tuong" title="Thông báo" aria-label="Thông báo">
+            <i class="fa-regular fa-bell"></i>
+          </a>
+          <a href="../../share/profile/profile.html?role=safety" class="nut-bieu-tuong" title="Hồ sơ cá nhân" aria-label="Hồ sơ cá nhân">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </div>
+      </header>
+
+      <div class="than-trang">
+        <span class="nhan-chuyen-muc">QUẢN LÝ AN TOÀN HSE</span>
+        <header class="tieu-de-chinh">
+          <div>
+            <h1>Inspection Management</h1>
+            <p class="tieu-de-phu">Lên lịch, theo dõi và quản lý các đợt kiểm tra an toàn công trường.</p>
+          </div>
+          <div class="nhom-nut-thao-tac">
+            <div class="chuyen-doi-che-do-xem">
+              <a href="safety-inspection-management_table.html" class="nut-chuyen-doi kich-hoat"><i class="fa-solid fa-table-list"></i> Bảng</a>
+              <a href="../inspection_management_schedule/safety-inspection-management_schedule.html" class="nut-chuyen-doi"><i class="fa-regular fa-calendar-days"></i> Lịch</a>
+            </div>
+            <button type="button" class="nut-chinh"><i class="fa-solid fa-plus"></i> Lên lịch kiểm tra mới</button>
+          </div>
+        </header>
+
+        <section class="luoi-thong-ke">
+          <article class="the-thong-ke-hang">
+            <div class="bieu-tuong-thong-ke xam"><i class="fa-regular fa-clipboard"></i></div>
+            <div class="thong-tin-thong-ke">
+              <span class="tieu-de-thong-ke">Tổng đợt kiểm tra</span>
+              <div class="gia-tri-thong-ke">10</div>
+              <span class="mo-ta-thong-ke">Trong tuần này</span>
+            </div>
+          </article>
+          <article class="the-thong-ke-hang">
+            <div class="bieu-tuong-thong-ke xanh-duong"><i class="fa-regular fa-calendar-check"></i></div>
+            <div class="thong-tin-thong-ke">
+              <span class="tieu-de-thong-ke">Đã lên lịch</span>
+              <div class="gia-tri-thong-ke">02</div>
+              <span class="mo-ta-thong-ke">Sắp diễn ra</span>
+            </div>
+          </article>
+          <article class="the-thong-ke-hang">
+            <div class="bieu-tuong-thong-ke cam"><i class="fa-regular fa-clock"></i></div>
+            <div class="thong-tin-thong-ke">
+              <span class="tieu-de-thong-ke">Đang thực hiện</span>
+              <div class="gia-tri-thong-ke">01</div>
+              <span class="mo-ta-thong-ke">Đang kiểm tra tại hiện trường</span>
+            </div>
+          </article>
+          <article class="the-thong-ke-hang">
+            <div class="bieu-tuong-thong-ke xanh-la"><i class="fa-regular fa-circle-check"></i></div>
+            <div class="thong-tin-thong-ke">
+              <span class="tieu-de-thong-ke">Hoàn thành</span>
+              <div class="gia-tri-thong-ke">07</div>
+              <span class="mo-ta-thong-ke">70% kế hoạch tuần</span>
+            </div>
+          </article>
+        </section>
+
+        <section class="thanh-bo-loc">
+          <search class="o-tim-kiem-bang">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" id="oNhapTimKiem" placeholder="Tìm tên đợt kiểm tra, mã kiểm tra...">
+          </search>
+          <button type="button" class="nut-bo-loc"><i class="fa-solid fa-location-dot"></i> Tất cả khu vực <i class="fa-solid fa-chevron-down"></i></button>
+          <button type="button" class="nut-bo-loc"><i class="fa-solid fa-sliders"></i> Tất cả trạng thái <i class="fa-solid fa-chevron-down"></i></button>
+          <button type="button" class="nut-bo-loc"><i class="fa-regular fa-user"></i> Người phụ trách <i class="fa-solid fa-chevron-down"></i></button>
+          <button type="button" class="nut-bo-loc"><i class="fa-regular fa-calendar"></i> 28/09 – 04/10/2026 <i class="fa-solid fa-chevron-down"></i></button>
+        </section>
+
+        <article class="the-noi-dung">
+          <header class="dau-the-bang">
+            <span>Danh sách đợt kiểm tra <mark class="nhan-so-luong">10 đợt</mark></span>
+            <div class="cong-cu-phai">
+              <small>Tuần 40 · 28/09 – 04/10/2026</small>
+              <button type="button" class="nut-vieu-ngoai nut-nho"><i class="fa-solid fa-download"></i> Xuất báo cáo</button>
+            </div>
+          </header>
+
+          <div class="khung-cuon-bang">
+          <table class="bang-du-lieu" id="bangKiemTra">
+            <thead>
+              <tr>
+                <th width="30"><input type="checkbox" id="chonTatCa"></th>
+                <th>ĐỢT KIỂM TRA <i class="fa-solid fa-arrow-up-z-a"></i></th>
+                <th>KHU VỰC</th>
+                <th>NGƯỜI PHỤ TRÁCH</th>
+                <th>NGÀY / GIỜ</th>
+                <th>TRẠNG THÁI</th>
+                <th class="van-ban-phai">THAO TÁC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><strong>An toàn giàn giáo</strong><br><small class="van-ban-xam">KT-0241 · 18/18 hạng mục</small></td>
+                <td><i class="fa-solid fa-location-dot bieu-tuong-xam"></i> Tầng 12 · Khu B1</td>
+                <td><div class="hang-nguoi-dung"><span class="anh-da-dien-nho">MA</span> Nguyễn Minh Anh</div></td>
+                <td><strong>28/09/2026</strong><br><small class="van-ban-xam">08:00 – 10:00</small></td>
+                <td><mark class="nhan-trang-thai hoan-thanh">• Hoàn thành</mark></td>
+                <td class="van-ban-phai">
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-eye"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-pen-to-square"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><strong>Thiết bị nâng hạ</strong><br><small class="van-ban-xam">KT-0242 · 24/24 hạng mục</small></td>
+                <td><i class="fa-solid fa-location-dot bieu-tuong-xam"></i> Bãi cẩu · Khu B2</td>
+                <td><div class="hang-nguoi-dung"><span class="anh-da-dien-nho">QH</span> Trần Quốc Huy</div></td>
+                <td><strong>28/09/2026</strong><br><small class="van-ban-xam">13:00 – 15:00</small></td>
+                <td><mark class="nhan-trang-thai hoan-thanh">• Hoàn thành</mark></td>
+                <td class="van-ban-phai">
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-eye"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-pen-to-square"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><strong>An toàn điện tạm</strong><br><small class="van-ban-xam">KT-0243 · 16/16 hạng mục</small></td>
+                <td><i class="fa-solid fa-location-dot bieu-tuong-xam"></i> Tầng 08 · Khu B1</td>
+                <td><div class="hang-nguoi-dung"><span class="anh-da-dien-nho">HN</span> Lê Hoàng Nam</div></td>
+                <td><strong>29/09/2026</strong><br><small class="van-ban-xam">09:00 – 11:00</small></td>
+                <td><mark class="nhan-trang-thai hoan-thanh">• Hoàn thành</mark></td>
+                <td class="van-ban-phai">
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-eye"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-pen-to-square"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><strong>Phòng cháy chữa cháy</strong><br><small class="van-ban-xam">KT-0244 · 22/22 hạng mục</small></td>
+                <td><i class="fa-solid fa-location-dot bieu-tuong-xam"></i> Kho vật tư · Khu B3</td>
+                <td><div class="hang-nguoi-dung"><span class="anh-da-dien-nho">TH</span> Phạm Thu Hà</div></td>
+                <td><strong>29/09/2026</strong><br><small class="van-ban-xam">14:00 – 16:00</small></td>
+                <td><mark class="nhan-trang-thai hoan-thanh">• Hoàn thành</mark></td>
+                <td class="van-ban-phai">
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-eye"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-pen-to-square"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><strong>Làm việc trên cao</strong><br><small class="van-ban-xam">KT-0245 · 20/20 hạng mục</small></td>
+                <td><i class="fa-solid fa-location-dot bieu-tuong-xam"></i> Tầng 15 · Khu B1</td>
+                <td><div class="hang-nguoi-dung"><span class="anh-da-dien-nho">MA</span> Nguyễn Minh Anh</div></td>
+                <td><strong>30/09/2026</strong><br><small class="van-ban-xam">08:00 – 10:00</small></td>
+                <td><mark class="nhan-trang-thai hoan-thanh">• Hoàn thành</mark></td>
+                <td class="van-ban-phai">
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-eye"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-pen-to-square"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><strong>An toàn đào đất</strong><br><small class="van-ban-xam">KT-0246 · 15/15 hạng mục</small></td>
+                <td><i class="fa-solid fa-location-dot bieu-tuong-xam"></i> Hầm B2 · Khu B2</td>
+                <td><div class="hang-nguoi-dung"><span class="anh-da-dien-nho">QH</span> Trần Quốc Huy</div></td>
+                <td><strong>01/10/2026</strong><br><small class="van-ban-xam">10:00 – 12:00</small></td>
+                <td><mark class="nhan-trang-thai hoan-thanh">• Hoàn thành</mark></td>
+                <td class="van-ban-phai">
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-eye"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-pen-to-square"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><strong>Vệ sinh công trường</strong><br><small class="van-ban-xam">KT-0247 · 12/12 hạng mục</small></td>
+                <td><i class="fa-solid fa-location-dot bieu-tuong-xam"></i> Toàn bộ · Khu B</td>
+                <td><div class="hang-nguoi-dung"><span class="anh-da-dien-nho">TH</span> Phạm Thu Hà</div></td>
+                <td><strong>02/10/2026</strong><br><small class="van-ban-xam">09:00 – 11:00</small></td>
+                <td><mark class="nhan-trang-thai hoan-thanh">• Hoàn thành</mark></td>
+                <td class="van-ban-phai">
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-eye"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-pen-to-square"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+              <tr class="hang-kich-hoat">
+                <td><input type="checkbox"></td>
+                <td><strong>Kiểm tra HSE định kỳ</strong><br><small class="van-ban-xam">KT-0248 · 14/28 hạng mục</small></td>
+                <td><i class="fa-solid fa-location-dot bieu-tuong-xam"></i> Tầng 10 · Khu B1</td>
+                <td><div class="hang-nguoi-dung"><span class="anh-da-dien-nho">MA</span> Nguyễn Minh Anh</div></td>
+                <td><strong>03/10/2026</strong><br><small class="van-ban-xam">08:00 – 10:00</small></td>
+                <td><mark class="nhan-trang-thai dang-thuc-hien">• Đang thực hiện</mark></td>
+                <td class="van-ban-phai">
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-eye"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-pen-to-square"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><strong>An toàn hàn cắt</strong><br><small class="van-ban-xam">KT-0249 · 18 hạng mục</small></td>
+                <td><i class="fa-solid fa-location-dot bieu-tuong-xam"></i> Xưởng cơ khí · Khu B3</td>
+                <td><div class="hang-nguoi-dung"><span class="anh-da-dien-nho">HN</span> Lê Hoàng Nam</div></td>
+                <td><strong>03/10/2026</strong><br><small class="van-ban-xam">13:00 – 15:00</small></td>
+                <td><mark class="nhan-trang-thai da-len-lich">• Đã lên lịch</mark></td>
+                <td class="van-ban-phai">
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-eye"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-pen-to-square"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><strong>Kiểm tra bảo hộ cá nhân</strong><br><small class="van-ban-xam">KT-0250 · 14 hạng mục</small></td>
+                <td><i class="fa-solid fa-location-dot bieu-tuong-xam"></i> Cổng chính · Khu B</td>
+                <td><div class="hang-nguoi-dung"><span class="anh-da-dien-nho">TH</span> Phạm Thu Hà</div></td>
+                <td><strong>04/10/2026</strong><br><small class="van-ban-xam">10:00 – 12:00</small></td>
+                <td><mark class="nhan-trang-thai da-len-lich">• Đã lên lịch</mark></td>
+                <td class="van-ban-phai">
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-eye"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-regular fa-pen-to-square"></i></button>
+                  <button type="button" class="nut-thao-tac-bang"><i class="fa-solid fa-ellipsis"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+
+          <footer class="thanh-phan-trang">
+            <span>Hiển thị 1–10 trong tổng số 10 đợt kiểm tra</span>
+            <div class="nhom-dieu-huong-trang">
+              <small>Số dòng mỗi trang</small>
+              <select class="bo-chon-nho"><option>10</option></select>
+              <button type="button" class="nut-trang"><i class="fa-solid fa-chevron-left"></i></button>
+              <button type="button" class="nut-trang kich-hoat">1</button>
+              <button type="button" class="nut-trang"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </footer>
+        </article>
+      </div>
+
+      <footer class="chan-trang-ung-dung">
+        <span><i class="fa-regular fa-clock"></i> Giờ Việt Nam (GMT+7) · Cập nhật lúc 09:10, 03/10/2026</span>
+        <span>Dữ liệu kiểm tra được lưu tự động</span>
+      </footer>
+    </main>
+  </div>
+  <script src="safety-inspection-management_table.js" defer></script></body>
+</html>
